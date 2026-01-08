@@ -6,6 +6,16 @@ public class Person {
 	
 	private String address;
 	
+// 	<----------Default Constructor---------->
+	public Person() {
+		}
+	
+// 	<----------Parametrized Constructor---------->	
+	public Person(String name, String address) {
+		this.name = name;
+		this.address = address;
+	}
+	
 	
 	public String getName() {
 		return name;
