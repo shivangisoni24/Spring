@@ -1,0 +1,17 @@
+package com.rays.autowire.bytype;
+
+import com.rays.autowire.byname.UserDAOInt;
+
+public class UserService {
+
+	private UserDAOInt userDao;
+
+	public void setuserDao(UserDAOInt userDao) {
+		this.userDao = userDao;
+	}
+
+	public void testAdd() {
+		userDao.add();
+	}
+
+}
