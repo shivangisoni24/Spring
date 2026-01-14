@@ -1,0 +1,15 @@
+package com.rays.autowirebytype;
+
+import org.springframework.stereotype.Repository;
+
+@Repository("userDao")
+//@Repository annotation is use for create DAO(CRUD) layer and also create bean
+
+public class UserDAOImpl implements UserDAOInt {
+
+	public void add() {
+		
+		System.out.println("Type Add method.....");
+	}
+
+}

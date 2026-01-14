@@ -1,0 +1,20 @@
+package com.rays.autowirebyconstructor;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import com.rays.AppConfig;
+import com.rays.autowirebyname.UserServiceByName;
+
+public class TestUserService {
+	
+	public static void main(String[] args) {
+
+		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+		UserServiceByConstructor userService = context.getBean(UserServiceByConstructor.class);
+
+		userService.testAdd();
+	}
+
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;spring-da0-jdbc&apos; to &apos;spring-dao-jdbc&apos;" description="Rename resource &apos;spring-da0-jdbc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/spring-da0-jdbc" name="spring-dao-jdbc" stamp="1768293079081" updateReferences="true"/>
+</session>

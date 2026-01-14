@@ -1,0 +1,9 @@
+package com.rays.autowirebytype;
+
+public class UserDAOImpl implements UserDAPOInt{
+	
+	public void add() {
+		System.out.println("Add method.....");
+	}
+
+}

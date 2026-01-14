@@ -1,0 +1,14 @@
+package com.rays.service;
+
+import com.rays.dto.UserDTO;
+
+public interface UserServiceInt {
+	
+	public long add(UserDTO dto);
+	
+	public void delete(int id);
+	
+	public void update(UserDTO dto);
+	
+
+}
