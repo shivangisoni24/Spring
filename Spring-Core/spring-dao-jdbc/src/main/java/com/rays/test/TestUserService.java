@@ -24,10 +24,14 @@ public class TestUserService {
 		
 		TestUserService test = (TestUserService)context.getBean("testUserService");
 		
+//		test.testNextPk();
 //		test.testAdd();
 //		test.testDelete();
 //		test.testUpdate();
 		test.testSearch();
+//		test.authenticate();
+//		test.testfindByLogin();
+//	    test.testFindByPk();	
 		
 	}
 
@@ -61,19 +65,59 @@ public class TestUserService {
 	}
 	
 	
+	private void authenticate() {
+		UserDTO dto = service.authenticate("pari@gmail.com", "Pass@123");
+		System.out.println(dto.getId());
+		System.out.println(dto.getFirstName());
+		System.out.println(dto.getLastName());
+		System.out.println(dto.getLogin());
+		System.out.println(dto.getPassword());
+		
+	}
+	
 	private void testSearch() {
-		List list = service.search();
+		UserDTO dto = new UserDTO();
+		
+		int pageNo = 1;
+		int pageSize = 5;
+//		dto.setFirstName("Rajesh");
+		List<UserDTO> list = service.search(dto,pageNo, pageSize);
 		
 		Iterator<UserDTO> it = list.iterator();
 		while(it.hasNext()) {
-			UserDTO dto = it.next();
+		    dto = it.next();
 			System.out.println(dto.getId());
 			System.out.println(dto.getFirstName());
-			System.out.println(dto.getLastName());
 			System.out.println(dto.getLogin());
 			System.out.println(dto.getPassword());
 			
 		}
+	}
+	
+
+	private void testfindByLogin() {
+		UserDTO dto = service.findByLogin("shashank@gmail.com");
+		System.out.println(dto.getId());
+		System.out.println(dto.getFirstName());
+		System.out.println(dto.getLastName());
+		System.out.println(dto.getLogin());
+		System.out.println(dto.getPassword());
+	}
+
+   
+	private void testNextPk() {
+		 long pk = service.nextPk();
+		 System.out.println("Next PK = " + pk);
+		
+	}
+	
+	private void testFindByPk() {
+		UserDTO dto = service.findByPk(1);
+		System.out.println(dto.getId());
+		System.out.println(dto.getFirstName());
+		System.out.println(dto.getLastName());
+		System.out.println(dto.getLogin());
+		System.out.println(dto.getPassword());
 	}
 	
 }

@@ -15,7 +15,7 @@ public class UserServiceImpl implements UserServiceInt {
 
 	@Autowired
 	private UserDAOInt dao;
-	
+
 	@Transactional(propagation = Propagation.REQUIRED)
 	public long add(UserDTO dto) {
 		long pk = dao.add(dto);
@@ -24,21 +24,41 @@ public class UserServiceImpl implements UserServiceInt {
 
 	@Transactional(propagation = Propagation.REQUIRED)
 	public void delete(int id) {
-	 dao.delete(id);
+		dao.delete(id);
 	}
 
 	@Transactional(propagation = Propagation.REQUIRED)
 	public void update(UserDTO dto) {
 		dao.update(dto);
-		
+
 	}
 
 	public List search() {
 		return dao.search();
 	}
-	
-}
 
+	public UserDTO authenticate(String login, String password) {
+		return dao.authenticate(login, password);
+	}
+
+	public UserDTO findByLogin(String login) {
+		UserDTO dto = dao.findByLogin(login);
+		return dto;
+	}
+
+	public long nextPk() {
+		return dao.nextPk();
+	}
+
+	public UserDTO findByPk(int id) {
+		return dao.findByPk(id);
+	}
+
+	public List<UserDTO> search(UserDTO dto, int pageNo, int pageSize) {
+		return dao.search(dto, pageNo, pageSize);
+	}
+
+}
 
 /*
  * @Transactional ka matlab hai ki Spring is method ko ek transaction ke andar
