@@ -48,6 +48,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="spring-dao-hibernate"/>
 			<item value="spring-da0-jdbc"/>
 			<item value="spring-core-annotation"/>
 			<item value="spring-core-project"/>
