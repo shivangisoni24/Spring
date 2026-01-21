@@ -1,4 +1,4 @@
-package com.rays.test;
+ package com.rays.test;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -26,3 +26,4 @@ public class TestPerson {
 	}
 
 }
+
