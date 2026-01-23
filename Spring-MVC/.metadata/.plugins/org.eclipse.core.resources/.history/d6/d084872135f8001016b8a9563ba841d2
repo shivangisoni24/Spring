@@ -8,26 +8,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping(value = "Welcome")
 public class WelcomeCtl {
-
+	
 	@GetMapping
 	public String display(Model model) {
+		model.addAttribute("message", "welcome to spring");
 		System.out.println("display");
-		model.addAttribute("message", "Welcome to Spring MVC..!!");
 		return "Welcome";
 	}
-
+	
 	@GetMapping("first")
 	public String display1(Model model) {
-		System.out.println("display1");
-		model.addAttribute("message", "Welcome to Spring MVC..!!");
+		model.addAttribute("message", "welcome to first spring");
 		return "Welcome";
 	}
-
+	
 	@GetMapping("second")
 	public String display2(Model model) {
-		System.out.println("display2");
-		model.addAttribute("message", "Welcome to Spring MVC..!!");
+		model.addAttribute("message", "welcome to second spring");
 		return "Welcome";
 	}
-
 }

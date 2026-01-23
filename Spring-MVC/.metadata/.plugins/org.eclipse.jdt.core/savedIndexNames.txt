@@ -50,7 +50,6 @@ INDEX VERSION 1.131+D:\Rays\Spring-WorkSpace\Spring-MVC\.metadata\.plugins\org.e
 4090229951.index
 373954679.index
 1949356081.index
-1226137606.index
 2565356412.index
 535622466.index
 2995364464.index
