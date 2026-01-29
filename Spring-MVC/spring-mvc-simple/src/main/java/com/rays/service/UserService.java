@@ -29,10 +29,10 @@ public class UserService {
 
 	@Transactional(propagation = Propagation.REQUIRED)
 	public void update(UserDTO dto) {
-		UserDTO existDto = findByLogin(dto.getLogin());
-		if (existDto != null && existDto.getId() != dto.getId()) {
-			throw new RuntimeException("login id already exist");
-		}
+		//UserDTO existDto = findByLogin(dto.getLogin());
+		//if (existDto != null && existDto.getId() != dto.getId()) {
+			//throw new RuntimeException("login id already exist");
+		//}
 		dao.update(dto);
 	}
 

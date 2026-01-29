@@ -40,32 +40,49 @@ public class UserCtl {
 			form.setAddress(dto.getAddress());
 		}
 
-		return "UserView";
+		return "User";
 	}
-
 	@PostMapping
-	public String submit(@ModelAttribute("form") @Valid UserForm form, BindingResult bindingResult) throws Exception {
+	public String submit(@ModelAttribute("form") @Valid UserForm form,
+	                     BindingResult bindingResult,
+	                     Model model) throws Exception {
 
-		if (bindingResult.hasErrors()) {
-			return "UserView";
-		}
+	    if (bindingResult.hasErrors()) {
+	        return "User";
+	    }
 
-		UserDTO dto = new UserDTO();
-		dto.setId(form.getId());
-		dto.setFirstName(form.getFirstName());
-		dto.setLastName(form.getLastName());
-		dto.setLogin(form.getLogin());
-		dto.setPassword(form.getPassword());
-		dto.setDob(DataUtility.stringToDate(form.getDob()));
-		dto.setAddress(form.getAddress());
+	    if (form.getId() > 0) {
 
-		if (form.getId() > 0) {
-			service.update(dto);
-		} else {
-			service.add(dto);
-		}
-		return "UserView";
+	        // ✅ SAME object jo session me already hai
+	        UserDTO dto = service.findByPk(form.getId());
+
+	        dto.setFirstName(form.getFirstName());
+	        dto.setLastName(form.getLastName());
+	        dto.setLogin(form.getLogin());
+	        dto.setPassword(form.getPassword());
+	        dto.setDob(DataUtility.stringToDate(form.getDob()));
+	        dto.setAddress(form.getAddress());
+
+	        service.update(dto);
+	        model.addAttribute("success", "User Updated Successfully");
+
+	    } else {
+
+	        UserDTO dto = new UserDTO();
+	        dto.setFirstName(form.getFirstName());
+	        dto.setLastName(form.getLastName());
+	        dto.setLogin(form.getLogin());
+	        dto.setPassword(form.getPassword());
+	        dto.setDob(DataUtility.stringToDate(form.getDob()));
+	        dto.setAddress(form.getAddress());
+
+	        service.add(dto);
+	        model.addAttribute("success", "User Added Successfully");
+	    }
+
+	    return "User";
 	}
+
 
 	@GetMapping("search")
 	public String displayUserList(@ModelAttribute("form") UserForm form, Model model) {
@@ -79,7 +96,7 @@ public class UserCtl {
 
 		model.addAttribute("list", list);
 
-		return "UserListView";
+		return "UserList";
 	}
 
 	@PostMapping("search")
@@ -121,6 +138,6 @@ public class UserCtl {
 
 		model.addAttribute("list", list);
 
-		return "UserListView";
+		return "UserList";
 	}
 }

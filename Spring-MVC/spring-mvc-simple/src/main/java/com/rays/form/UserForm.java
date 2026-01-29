@@ -8,33 +8,23 @@ public class UserForm {
 
 	private Long[] ids;
 
-	@NotEmpty(message = "First name is required")
+	@NotEmpty(message = "first name is required")
 	private String firstName;
 
-	@NotEmpty(message = "Last name is required")
+	@NotEmpty(message = "last name is required")
 	private String lastName;
 
-	@NotEmpty(message = "Login is required")
+	@NotEmpty(message = "login name is required")
 	private String login;
 
-	@NotEmpty(message = "Password is required")
+	@NotEmpty(message = "password name is required")
 	private String password;
 
-	@NotEmpty(message = "Dob is required")
+	@NotEmpty(message = "dob name is required")
 	private String dob;
 
-	@NotEmpty(message = "Address is required")
+	@NotEmpty(message = "address name is required")
 	private String address;
-
-	private int pageNo;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
 
 	public Long[] getIds() {
 		return ids;
@@ -42,6 +32,24 @@ public class UserForm {
 
 	public void setIds(Long[] ids) {
 		this.ids = ids;
+	}
+
+	private int pageNo;
+
+	public int getPageNo() {
+		return pageNo;
+	}
+
+	public void setPageNo(int pageNo) {
+		this.pageNo = pageNo;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getFirstName() {
@@ -90,14 +98,6 @@ public class UserForm {
 
 	public void setAddress(String address) {
 		this.address = address;
-	}
-
-	public int getPageNo() {
-		return pageNo;
-	}
-
-	public void setPageNo(int pageNo) {
-		this.pageNo = pageNo;
 	}
 
 }
