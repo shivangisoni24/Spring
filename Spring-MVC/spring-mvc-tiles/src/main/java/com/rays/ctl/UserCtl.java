@@ -136,7 +136,10 @@ public class UserCtl {
 				for (long id : form.getIds()) {
 					service.delete(id);
 				}
-			}
+				 model.addAttribute("success", "Record deleted successfully...");
+		    } else {
+		        model.addAttribute("error", "Please select at least one record...");
+		    }  
 		}
 
 		form.setPageNo(pageNo);

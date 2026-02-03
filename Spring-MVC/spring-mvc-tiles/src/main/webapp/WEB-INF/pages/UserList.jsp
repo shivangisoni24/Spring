@@ -9,16 +9,42 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+<style>
+    .msg-box {
+        height: 20px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .success { color: green; }
+    .error { color: red; }
+</style>
+
+
 </head>
 <body>
 	<%-- <%@ include file="Header.jsp"%> --%>
 	
 	<div align="center">
 		<h1 style="color: navy">UserList</h1>
-		<span style="color: green">${success}</span>
+	   <%-- <span style="color: green">${success}</span> --%>
 		<sf:form method="post" modelAttribute="form">
-			<sf:hidden path="pageNo" />
+			<sf:hidden path="pageNo" /> 
+			
+		 <div class="msg-box">
+            <c:if test="${not empty success}">
+             <span class="success">${success}</span>
+            </c:if>
 
+           <c:if test="${not empty error}">
+            <span class="error">${error}</span>
+           </c:if>
+      </div> 
+	
+	
+       &nbsp; &nbsp; 
+ 
 			<table>
 				<tr>
 					<th>FirstName</th>
@@ -50,7 +76,7 @@
 			
 		</table> --%>
 		
-		 &nbsp; &nbsp;
+		 &nbsp; &nbsp; <!-- ====== (&nbsp; &nbsp;) for space ======  -->
 		
 		<table style="width: 100%" border="1">
 			<tr>

@@ -3,6 +3,8 @@
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="javassist.tools.rmi.AppletServer"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="spring-mvc-simple"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
 </launchConfiguration>

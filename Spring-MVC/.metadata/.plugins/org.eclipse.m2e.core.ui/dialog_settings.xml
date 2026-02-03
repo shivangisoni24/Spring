@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Rays\Spring-WorkSpace\Spring-MVC\Servers"/>
+			<item value="D:\Rays\Spring-WorkSpace\Spring-MVC\spring-mvc-tiles"/>
+			<item value="D:\Rays\Spring-WorkSpace\Spring-MVC\spring-mvc-simple"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -25,13 +28,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.rays.spring_mvc_simple"/>
+			<item value="com.rays.spring_mvc_front_ctl"/>
 		</list>
 		<list key="groupId">
 			<item value="com.rays"/>
 		</list>
 		<list key="artifactId">
-			<item value="spring-mvc-simple"/>
+			<item value="spring-mvc-front-ctl"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

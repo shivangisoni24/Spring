@@ -9,13 +9,18 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
 <style>
-.error {
-	color: red;
-	font-weight: bold;
-	font-size: 16px;
-}
+    .msg-box {
+        height: 20px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .success { color: green; }
+    .error { color: red; }
 </style>
+
 </head>
 <body>
 	<%-- <%@ include file="Header.jsp"%> --%>
@@ -27,16 +32,23 @@
 			<c:if test="${form.id==0}">
 				<h1 style="color: navy">Add User</h1>
 			</c:if>
-			<H3>
-				<c:if test="${not empty success}">
-					<font color="green">${success}</font>
-				</c:if>
+			 
+			<H3>	
+		 <div class="msg-box">
+            <c:if test="${not empty success}">
+             <span class="success">${success}</span>
+            </c:if>
+
+           <c:if test="${not empty error}">
+            <span class="error">${error}</span>
+           </c:if>
+      </div> 
 			</H3>
 			<table>
 				<tr>
-					<th align="left">First Name :</th>
+				<th align="left">First Name :</th>
 					<td><sf:input path="firstName" /></td>
-					<td><sf:errors path="firstName" cssClass="error"></sf:errors></td>
+					<td><sf:errors path="firstName" cssClass="error"></sf:errors></td> 
 				</tr>
 				<tr>
 					<th align="left">Last Name :</th>

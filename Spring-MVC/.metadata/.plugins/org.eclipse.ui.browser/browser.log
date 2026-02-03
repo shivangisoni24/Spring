@@ -33,3 +33,17 @@ Jan 24, 2026 13:22:02.56 Created TensorFlow Lite XNNPACK delegate for CPU.
 Jan 24, 2026 13:22:06.13 [1384:3892:0124/132206.130:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
 Jan 24, 2026 13:22:32.28 [1384:3892:0124/132232.287:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
 Jan 24, 2026 13:23:19.78 [1384:3892:0124/132319.785:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+
+Jan 24, 2026 14:50:31.77 NEW SESSION
+Jan 24, 2026 14:50:31.77 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jan 24, 2026 14:50:37.54 [7560:11516:0124/145037.547:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Jan 24, 2026 14:51:18.24 [7560:11516:0124/145118.249:ERROR:google_apis\gcm\engine\registration_request.cc:275] Registration URL fetching failed.
+Jan 24, 2026 14:52:12.85 [7560:11516:0124/145212.851:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Jan 24, 2026 14:54:13.12 [7560:11516:0124/145413.128:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+
+Jan 24, 2026 15:43:18.95 NEW SESSION
+Jan 24, 2026 15:43:18.95 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jan 24, 2026 15:43:23.26 [12096:4708:0124/154323.269:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Jan 24, 2026 15:43:48.37 [12096:4708:0124/154348.378:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Jan 24, 2026 15:44:32.31 [12096:4708:0124/154432.318:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Jan 24, 2026 15:46:31.07 [12096:4708:0124/154631.072:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
